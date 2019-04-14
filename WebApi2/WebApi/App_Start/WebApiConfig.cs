@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApi2.Controllers;
 
 namespace WebApi
 {
@@ -19,6 +20,8 @@ namespace WebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.JsonFormatter.SerializerSettings.Converters.Add(new DecimalToStringConverter());
         }
     }
 }

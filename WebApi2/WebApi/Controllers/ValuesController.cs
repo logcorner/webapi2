@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using WebApi2.Models;
 
 namespace WebApi.Controllers
 {
@@ -22,8 +19,9 @@ namespace WebApi.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody]InputData InputData)
         {
+            return Ok(InputData);
         }
 
         // PUT api/values/5
