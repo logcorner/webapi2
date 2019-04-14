@@ -6,6 +6,12 @@ namespace WebApi.Controllers
 {
     public class ValuesController : ApiController
     {
+        public IProductRepository ProductRepository { get; }
+
+        public ValuesController(IProductRepository productRepository)
+        {
+            ProductRepository = productRepository;
+        }
         // GET api/values
         public IEnumerable<string> Get()
         {
