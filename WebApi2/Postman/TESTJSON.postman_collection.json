@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "6ec0ae65-f168-41c1-8871-722de8f5aef6",
+		"name": "TESTJSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:16065/api/Values__\"1,2\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"1,2\",\n\t\"nullableValue\":\"1,2\",\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:4525/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "4525",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:16065/api/Values__1,2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":1,2,\n\t\"nullableValue\":1,2,\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:4525/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "4525",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:16065/api/Values__\"1.2\"",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"1.2\",\n\t\"nullableValue\":\"1.2\",\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:4525/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "4525",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:16065/api/Values__1.2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":1.2,\n\t\"nullableValue\":1.2,\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:4525/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "4525",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:16065/api/Values__Empty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":\"\",\n\t\t\"nullableValue\":\"\",\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:62583/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "62583",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:16065/api/Values__null",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\":null,\n\t\"nullableValue\":null,\n\t\"date\":\"12/11/2018\"\n}"
+				},
+				"url": {
+					"raw": "localhost:62583/api/Values",
+					"host": [
+						"localhost"
+					],
+					"port": "62583",
+					"path": [
+						"api",
+						"Values"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
