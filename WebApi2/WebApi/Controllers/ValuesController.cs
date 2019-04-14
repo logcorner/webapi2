@@ -12,6 +12,10 @@ namespace WebApi.Controllers
         {
             ProductRepository = productRepository;
         }
+        /// <summary>
+        /// Gets the values
+        /// </summary>
+        /// <returns></returns>
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -23,7 +27,11 @@ namespace WebApi.Controllers
         {
             return "value";
         }
-
+        /// <summary>
+        /// Post new input datas
+        /// </summary>
+        /// <param name="InputData"></param>
+        /// <returns></returns>
         // POST api/values
         public IHttpActionResult Post([FromBody]InputData InputData)
         {
