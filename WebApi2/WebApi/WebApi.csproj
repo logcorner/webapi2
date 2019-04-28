@@ -149,6 +149,10 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityWebApiActivator.cs" />
+    <Compile Include="Exceptions\DbUpdateExceptionFilterAttribute.cs" />
+    <Compile Include="Exceptions\ErrorContentResult.cs" />
+    <Compile Include="Exceptions\ExceptionLogger.cs" />
+    <Compile Include="Helper\UnhandledExceptionHandler.cs" />
     <Compile Include="Repository\IProductRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

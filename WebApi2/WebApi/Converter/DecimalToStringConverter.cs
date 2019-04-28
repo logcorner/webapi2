@@ -1,11 +1,9 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Globalization;
-using System.Threading;
-using WebApi.Helper;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
-namespace WebApi2.Controllers
+namespace WebApi.Converter
 {
     public class DecimalToStringConverter : JsonConverter
     {
@@ -19,7 +17,7 @@ namespace WebApi2.Controllers
                 return null;
             }
 
-            var currentCulture = Helper.GetCurrentCulture();
+            var currentCulture = Helper.Helper.GetCurrentCulture();
             var wantedSeperator = NumberFormatInfo.CurrentInfo.NumberDecimalSeparator;
             var result = valueToConvert.Replace(".", wantedSeperator);
 

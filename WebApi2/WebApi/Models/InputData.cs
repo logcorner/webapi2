@@ -1,11 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using WebApi2.Controllers;
+﻿using System;
 
-namespace WebApi2.Models
+namespace WebApi.Models
 {
     public class InputData
     {

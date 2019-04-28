@@ -1,4 +1,4 @@
-﻿namespace WebApi
+﻿namespace WebApi.Repository
 {
     public class ProductRepository : IProductRepository
     {

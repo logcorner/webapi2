@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
-using WebApi2.Models;
+using WebApi.Models;
+using WebApi.Repository;
 
 namespace WebApi.Controllers
 {

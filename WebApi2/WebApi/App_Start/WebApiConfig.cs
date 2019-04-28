@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
-using WebApi2.Controllers;
+﻿using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
+using WebApi.Converter;
+using WebApi.Exceptions;
+using WebApi.Helper;
 
 namespace WebApi
 {
@@ -22,6 +22,8 @@ namespace WebApi
             );
 
             config.Formatters.JsonFormatter.SerializerSettings.Converters.Add(new DecimalToStringConverter());
+            config.Services.Replace(typeof(IExceptionLogger), new UnhandledExceptionLogger());
+            config.Services.Replace(typeof(IExceptionHandler), new UnhandledExceptionHandler());
         }
     }
 }
