@@ -20,15 +20,10 @@ namespace WebApi
             {
                 //NumberFormat = new NumberFormatInfo
                 //{
-
                 //    NumberDecimalSeparator = ",",
 
                 //},
-
-
             };
-
-
         }
     }
 }

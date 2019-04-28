@@ -17,10 +17,6 @@ namespace WebApi.Exceptions
             //    context.Response = new HttpResponseMessage(HttpStatusCode.Conflict);
 
             context.Response = new HttpResponseMessage(HttpStatusCode.InternalServerError);
-
-            
         }
     }
-
-
 }

@@ -13,6 +13,7 @@ namespace WebApi.Controllers
         {
             ProductRepository = productRepository;
         }
+
         /// <summary>
         /// Gets the values
         /// </summary>
@@ -28,6 +29,7 @@ namespace WebApi.Controllers
         {
             return "value";
         }
+
         /// <summary>
         /// Post new input datas
         /// </summary>

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Globalization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Globalization;
 
 namespace WebApi.Converter
 {
@@ -10,7 +10,7 @@ namespace WebApi.Converter
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             JToken jt = JValue.ReadFrom(reader);
-           
+
             string valueToConvert = jt.Value<string>();
             if (string.IsNullOrWhiteSpace(valueToConvert))
             {
@@ -27,8 +27,6 @@ namespace WebApi.Converter
             }
             return value;
         }
-
-       
 
         public override bool CanConvert(Type objectType)
         {

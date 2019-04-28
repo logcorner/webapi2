@@ -1,8 +1,8 @@
+using Swashbuckle.Application;
+using System;
 using System.Web.Http;
 using WebActivatorEx;
 using WebApi;
-using Swashbuckle.Application;
-using System;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 

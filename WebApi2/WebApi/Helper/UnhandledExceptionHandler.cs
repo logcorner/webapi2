@@ -1,5 +1,5 @@
-﻿using System.Web.Http.ExceptionHandling;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Web.Http.ExceptionHandling;
 using WebApi.Exceptions;
 
 namespace WebApi.Helper
