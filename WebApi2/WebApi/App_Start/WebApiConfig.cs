@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using Microsoft.Owin.Security.OAuth;
+using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using WebApi.Converter;
 using WebApi.Exceptions;
@@ -11,7 +12,9 @@ namespace WebApi
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            config.SuppressDefaultHostAuthentication();
+            config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            config.Filters.Add(new AuthorizeAttribute());
             // Web API routes
             config.MapHttpAttributeRoutes();
 

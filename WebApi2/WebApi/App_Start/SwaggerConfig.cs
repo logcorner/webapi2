@@ -80,6 +80,16 @@ namespace WebApi
                         //        scopes.Add("write", "Write access to protected resources");
                         //    });
 
+                        c.OAuth2("oauth2")
+                           .Description("OAuth2 Implicit Grant - Sample")
+                           .Flow("implicit")
+                           .AuthorizationUrl(
+                                   "https://demo.identityserver.io/connect/authorize")
+                           .Scopes(scopes =>
+                           {
+                               scopes.Add("api", "Access to the API");
+                           });
+
                         // Set this flag to omit descriptions for any actions decorated with the Obsolete attribute
                         //c.IgnoreObsoleteActions();
 
@@ -154,6 +164,7 @@ namespace WebApi
                         //
                         //c.OperationFilter<AddDefaultResponse>();
                         //
+                        c.OperationFilter<AssignOAuth2Settings>();
                         // If you've defined an OAuth2 flow as described above, you could use a custom filter
                         // to inspect some attribute on each action and infer which (if any) OAuth2 scopes are required
                         // to execute the operation
@@ -246,7 +257,7 @@ namespace WebApi
                         //    appName: "Swagger UI"
                         //    //additionalQueryStringParams: new Dictionary<string, string>() { { "foo", "bar" } }
                         //);
-
+                        c.EnableOAuth2Support("implicit", "swagg_ui", "Swagger UI");
                         // If your API supports ApiKey, you can override the default values.
                         // "apiKeyIn" can either be "query" or "header"
                         //
